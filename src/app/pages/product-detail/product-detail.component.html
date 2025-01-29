@@ -1,23 +1,12 @@
-<!-- @for (item of product; track $index) {
-<h1>This is your product: {{item.title}}</h1>
+<h1>This is your product: {{product?.title}}</h1>
 
-<table class="table table-dark table-striped"> 
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Product</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-     <tr>
-        <th scope="row">{{item.id}}</th>
-        <td>{{item.title}}</td>
-        <td>{{item.description}}</td>
-        <td>{{item.price | currency}}</td>
-      </tr>
-    </tbody>
-  </table>
-} -->
+<h4>{{product?.description}}</h4>
+
+<img src="{{product?.image}}" alt="{{product?.title}}">
+
+<p>{{product?.category}}</p>
+<p>{{product?.price | currency}}</p>
+<p>Valoracion: {{product?.rating?.rate | starRating}}</p> 
+
+
+

@@ -3,16 +3,17 @@ import { IProduct } from '../../models/product.model';
 import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { StarRatingPipe } from '../../pipes/star-rating.pipe';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, StarRatingPipe],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
   
-  public product?: IProduct;
+  public product?: IProduct ;
 
   private _route = inject(ActivatedRoute);
   private _apiService = inject(ApiService);
@@ -24,12 +25,5 @@ export class ProductDetailComponent {
         console.log(data);
       });
     });
-
-  // ngOnInit(id:number): void {
-    
-  //   this._apiService.getProduct(id).subscribe((data: IProduct) => {
-  //       this.product = data;
-  //       console.log(data);
-  //     });
   }
 }
