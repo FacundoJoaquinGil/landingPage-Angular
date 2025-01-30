@@ -12,6 +12,8 @@ import { StarRatingPipe } from '../../pipes/star-rating.pipe';
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
+
+  loading: boolean = true;
   
   public product?: IProduct ;
 
@@ -23,6 +25,7 @@ export class ProductDetailComponent {
       this._apiService.getProduct(params['id']).subscribe((data: IProduct) => {
         this.product = data;
         console.log(data);
+        this.loading = false;
       });
     });
   }

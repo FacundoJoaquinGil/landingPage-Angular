@@ -1,4 +1,7 @@
-<h1>This is our products:</h1>
+@if (loading == true) {
+  <h1 class="loading">Loading...</h1>
+}@else{
+  <h1>This is our products:</h1>
 
 <table class="table table-dark table-striped"> 
     <thead>
@@ -23,3 +26,5 @@
       }	
     </tbody>
   </table>
+}
+

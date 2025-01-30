@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit{
 
+  loading: boolean = true;
+
   productList: IProduct[] = [];
 
   private _route = inject(Router);
@@ -21,6 +23,7 @@ export class ProductsComponent implements OnInit{
   this._apiService.getAllProducts().subscribe((data: IProduct[]) => {
     this.productList = data;
     console.log(data)
+    this.loading = false;
   })}
 
   navegate(id: number){

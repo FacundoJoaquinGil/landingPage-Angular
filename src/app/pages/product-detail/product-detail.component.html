@@ -1,4 +1,8 @@
-<h1>This is your product: {{product?.title}}</h1>
+@if ( loading == true) {
+    <h1 class="loading">Loading...</h1>
+}
+@else {
+    <h1>This is your product: {{product?.title}}</h1>
 
 <h4>{{product?.description}}</h4>
 
@@ -7,6 +11,6 @@
 <p>{{product?.category}}</p>
 <p>{{product?.price | currency}}</p>
 <p>Valoracion: {{product?.rating?.rate | starRating}}</p> 
-
-
+}
+    
 
