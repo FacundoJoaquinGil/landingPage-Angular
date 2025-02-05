@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   enviar(event: Event) {
     event.preventDefault();
-    console.log(this.contactForm.value);
+    console.log(event);
   }
 
   ngOnInit(): void {
