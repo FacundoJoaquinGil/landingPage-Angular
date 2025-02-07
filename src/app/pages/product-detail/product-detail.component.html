@@ -2,15 +2,18 @@
     <h1 class="loading">Loading...</h1>
 }
 @else {
+  <div class="container-product">
     <h1>This is your product: {{product?.title}}</h1>
 
-<h4>{{product?.description}}</h4>
-
-<img src="{{product?.image}}" alt="{{product?.title}}">
-
-<p>{{product?.category}}</p>
-<p>{{product?.price | currency}}</p>
-<p>Valoracion: {{product?.rating?.rate | starRating}}</p> 
+    <h4>{{product?.description}}</h4>
+    
+    <img src="{{product?.image}}" alt="{{product?.title}}">
+    
+    <p>{{product?.category}}</p>
+    <p>{{product?.price | currency}}</p>
+    <p>Valoracion: {{product?.rating?.rate | starRating}}</p> 
+    <button class="btn btn-primary" (click)="volver()">Volver</button>
+  </div>
 }
     
 

@@ -5,3 +5,13 @@
     height: 100vh;
     margin: 0 auto;
 }
+
+.container-product{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-product img{
+    max-width: 400px;
+}   

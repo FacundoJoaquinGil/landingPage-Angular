@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { IProduct } from '../../models/product.model';
 import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StarRatingPipe } from '../../pipes/star-rating.pipe';
 
 @Component({
@@ -18,6 +18,7 @@ export class ProductDetailComponent {
   public product?: IProduct ;
 
   private _route = inject(ActivatedRoute);
+  private _router = inject(Router);
   private _apiService = inject(ApiService);
 
   ngOnInit(): void {
@@ -29,4 +30,9 @@ export class ProductDetailComponent {
       });
     });
   }
+
+  volver() {
+    this._router.navigate(['/products']);
+  }
+  
 }
