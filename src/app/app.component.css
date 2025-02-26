@@ -1,5 +1,10 @@
 .container-padre{
-    background-color: #444;
     min-height: 100vh;
     color: rgb(230, 236, 236);
 }
+
+*, body{
+    background-color: #221f26;
+} 
+
+ 

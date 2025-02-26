@@ -4,11 +4,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { CarouselComponent } from './pages/carousel/carousel.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, NavbarComponent, FooterComponent, RouterOutlet, RouterLink, CommonModule],
+  imports: [HeaderComponent, NavbarComponent, FooterComponent, RouterOutlet, RouterLink, CommonModule, CarouselComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
