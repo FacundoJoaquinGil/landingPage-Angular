@@ -2,18 +2,27 @@
     <h1 class="loading">Loading...</h1>
 }
 @else {
-  <div class="container-product">
-    <h1>This is your product: {{product?.title}}</h1>
+  <div class="product-card">
+    <img class="product-image" src="{{product?.image}}" alt="{{product?.title}}">
+    <div class="product-details">
+        <h2 class="product-title">{{product?.title}}</h2>
+        <p class="product-description">{{product?.description}}</p>
+        <p class="product-category">Categoría: {{product?.category}}</p>
+        <p class="product-price">Precio: {{product?.price | currency}}</p>
+        <p class="product-rating">Valoración: {{product?.rating?.rate | starRating}}</p>
+        
+        <div class="product-info">
+            <p><strong>Garantía:</strong> 24 meses ✅</p>
+            <p><strong>Stock disponible</strong> ✅</p>
+            <p><strong>Envíos a todo el país</strong> ✅</p>
+        </div>
 
-    <h4>{{product?.description}}</h4>
-    
-    <img src="{{product?.image}}" alt="{{product?.title}}">
-    
-    <p>{{product?.category}}</p>
-    <p>{{product?.price | currency}}</p>
-    <p>Valoracion: {{product?.rating?.rate | starRating}}</p> 
-    <button class="btn btn-primary" (click)="volver()">Volver</button>
-  </div>
+        <div class="buttons">
+            <button class="btn btn-success">Add to cart<img class="cart-count" src="../../../assets/carrito.png" alt="Carrito de compras"> </button>
+            <button class="btn btn-primary" (click)="volver()">Volver</button>
+        </div>
+    </div>
+</div>
 }
     
 
