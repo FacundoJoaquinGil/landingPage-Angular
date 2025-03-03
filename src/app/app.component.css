@@ -1,10 +1,9 @@
 .container-padre{
     min-height: 100vh;
-    color: rgb(230, 236, 236);
 }
 
 *, body{
-    background: #222;
+    background: #eeeeee;
 } 
 
  

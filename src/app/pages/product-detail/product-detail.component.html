@@ -7,19 +7,19 @@
     <div class="product-details">
         <h2 class="product-title">{{product?.title}}</h2>
         <p class="product-description">{{product?.description}}</p>
-        <p class="product-category">Categoría: {{product?.category}}</p>
-        <p class="product-price">Precio: {{product?.price | currency}}</p>
-        <p class="product-rating">Valoración: {{product?.rating?.rate | starRating}}</p>
+        <p class="product-category"><strong>Category: </strong>{{product?.category}}</p>
+        <p class="product-price"><strong>Price: </strong>{{product?.price | currency}}</p>
+        <p class="product-rating"><strong>Valoration: </strong>{{product?.rating?.rate | starRating}}</p>
         
         <div class="product-info">
-            <p><strong>Garantía:</strong> 24 meses ✅</p>
-            <p><strong>Stock disponible</strong> ✅</p>
-            <p><strong>Envíos a todo el país</strong> ✅</p>
+            <p><strong>Product Warranty:</strong> 12 Months✅</p>
+            <p><strong>Stock Ready</strong> ✅</p>
+            <p><strong>Worldwide Shipping</strong> ✅</p>
         </div>
 
         <div class="buttons">
             <button class="btn btn-success">Add to cart<img class="cart-count" src="../../../assets/carrito.png" alt="Carrito de compras"> </button>
-            <button class="btn btn-primary" (click)="volver()">Volver</button>
+            <button class="btn btn-primary" (click)="volver()">Return</button>
         </div>
     </div>
 </div>
