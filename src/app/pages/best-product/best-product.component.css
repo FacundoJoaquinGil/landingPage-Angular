@@ -1,63 +1,70 @@
-.container-bp{
-    padding: 20px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.container-bp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
 }
 
-.card-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.custom-cards a {
-    text-decoration: none;
+.container-bp h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .product-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px; /* Tamaño fijo para todas las cards */
+    height: 100px; /* Mantiene la misma altura */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; /* Evita desbordamientos */
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .product-image {
-    height: 200px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
-
 
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: center;
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-bottom: 5px;
 }
 
 .product-price {
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #28a745;
-    margin-bottom: 0;
+        color: #28a745;
+        margin-bottom: 0;
 }
 
-.card-footer {
-    background-color: transparent !important;
-    border-top: none !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-top: auto;
+a {
+    text-decoration: none;
+    color: inherit;
 }
