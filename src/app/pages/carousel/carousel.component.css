@@ -26,3 +26,11 @@
       height: 350px;
   }
 }
+
+.carousel-indicators button {
+  background-color: #555; /* Color de los indicadores inactivos */
+}
+
+.carousel-indicators .active {
+  background-color: #ff9800; /* Color del indicador activo */
+}

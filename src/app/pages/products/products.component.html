@@ -1,5 +1,8 @@
 @if (loading == true) {
-  <h1 class="loading">Loading...</h1>
+  <div class="loading">
+    <h3>Loading...</h3>
+    <img src="../../../assets/Loading.gif" alt="loading">
+  </div>
 } @else {
   <div class="product-grid">
     @for (product of productList; track $index) {

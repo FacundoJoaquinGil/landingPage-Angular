@@ -1,5 +1,5 @@
 <div class="container-bp">
-    <h3>This is our <strong>best products!</strong></h3>
+    <h3>This is our <strong class="title-bp">best products!</strong></h3>
     @for (product of productList.slice(0,6); track $index;) {
     @if (product.rating.rate > 3){
     <a [routerLink]="['/products', product.id]">
