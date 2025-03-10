@@ -19,13 +19,40 @@ export class ProductsComponent implements OnInit{
   private _route = inject(Router);
   private _apiService = inject(ApiService);
 
+  totalImages: number = 0;
+  loadedImages: number = 0;
+
   ngOnInit(): void {
   this._apiService.getAllProducts().subscribe((data: IProduct[]) => {
     this.productList = data;
     console.log(data)
     this.loading = false;
-  })}
 
+    this.totalImages = this.productList.length;
+
+    
+  })}
+  
+  onImageLoad() {
+    this.loadedImages++;
+  
+    if (this.loadedImages === this.totalImages) {
+      // Ya cargaron todas las imágenes
+      this.loading = false;
+    }
+  }
+
+  onImageError(event: Event) {
+    // Imagen fallida: contala igual
+    this.loadedImages++;
+  
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = 'assets/images/placeholder.png'; // Imagen por defecto si falla
+  
+    if (this.loadedImages === this.totalImages) {
+      this.loading = false;
+    }
+  }
   navegate(id: number){
     this._route.navigate(['/products', id]);
     console.log(id);    
