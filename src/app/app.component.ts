@@ -7,6 +7,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { CarouselComponent } from './pages/carousel/carousel.component';
 import { BestProductComponent } from './pages/best-product/best-product.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { BenefitsComponent } from './pages/benefits/benefits.component';
     RouterLink,
     CarouselComponent,
     BestProductComponent,
-    BenefitsComponent
+    BenefitsComponent,
+    AboutUsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

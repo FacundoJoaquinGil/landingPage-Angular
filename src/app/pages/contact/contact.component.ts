@@ -6,10 +6,11 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { AboutUsComponent } from "../about-us/about-us.component";
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, CommonModule, NgClass],
+  imports: [ReactiveFormsModule, CommonModule, NgClass, AboutUsComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })

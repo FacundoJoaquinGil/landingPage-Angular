@@ -1,4 +1,75 @@
-.container{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.contact {
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.contact .container-contact {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+
+.contact .intro {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.contact-info .info-item {
+    flex: 1 1 250px;
+    background-color: #ffffff82;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    color: #ff9800;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.container-form form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.container-form .form-label {
+    font-weight: bold;
+    color: #222;
+}
+
+.container-form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
 }
